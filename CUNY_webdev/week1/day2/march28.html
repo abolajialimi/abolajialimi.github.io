@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body style = "background-color:rgb(233, 230, 219)"">
+    <header>
+        <table width="100%" style =" background-color:#06dbf7">
+        <tr>
+                <td width="20%">
+        <img src= "nyc.jpeg"  width="300" height="100" alt="Statue of Liberty Logo">
+    </td>
+    <td width="60%" align="center">
+     <h1>LIBERTY TOURS</h1>
+    </td>
+    <td width="20%" align="center">
+        <input type="text" placeholder="Search..." >
+            <button>Search</button> 
+        </td>
+    </tr>
+</table>
+    </header>
+    <!-- <br> -->
+
+    <main>
+        <nav style = " background-color:#a2ff0118  ;text-align:center  ; padding: 10px"  >
+
+            <table width="100%">
+                <tr>
+                        <td width="20%">
+                            <a href ="#home" >HOME</a>    
+            </td>
+            <td width="20%" align="center">
+                <a href ="#about">ABOUT</a>  
+            </td>
+            <td width="20%" align="center">
+                <a href ="#book">BOOK</a>  
+                </td>
+
+            <td width="20%" align="center">
+                <a href ="#contact">CONTACT</a> 
+                </td>
+            </tr>
+        </table>
+        </nav>
+
+        <!-- <br> -->
+
+        <section style = "background-color:red">
+            <div style = "background-color:rgb(0, 255, 26); width:100%; float:left;text-align:center"><iframe src="../day1/Mar25.html" width="100%" height="300px"></iframe></div>
+        </section>
+
+        <br>
+    
+        <section style = "background-color:red">
+            
+            <div style = "background-color:rgb(171, 179, 171); width:33%; float:left;text-align:center">
+                <iframe width="490" height="402" src="https://www.youtube.com/embed/I_Pd_hFNmB0?si=M3HeckDhXaO9g0uu"
+                 title="YouTube video player" frameborder="0" 
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div style = "background-color:rgb(234, 255, 0); width:33%; float:left;text-align:center"> 
+                
+                <table width="100%" height="405">
+                <tr>
+                        <td width="20%"> <p><strong>Customer Review:</strong></p>
+                            <p>"Great tour and excellent service!"  </p>
+                            <p>Rating:  ★★★★★</p>    </td>
+                </tr>
+                <tr>
+                    <td width="20%"> <p><strong>Customer Review:</strong></p>
+                        <p>"Awesome experience , I will definetely do this again!"</p>
+                     
+                        <p>Rating:  ★★★★  </p>  </td>
+                </tr>
+            <tr>
+                <td width="20%"> <p><strong>Customer Review:</strong></p>
+                    <p>"Great historical city , I enjoyed Times Square!"</p>
+                    
+                    <p>Rating: ★★★ </p> </td>
+            </tr>
+        </table></div>
+            <div style = "background-color:rgb(255, 0, 174); width:33%; float:left;text-align:center">
+    <form action="submit_inquiry.php" method="post">
+   
+        <!-- Personal Information Section -->
+        <fieldset>
+            <h4>Tour Inquiry Form</h2>
+     
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="travelDate">Preferred Travel Date:</label><br>
+            <input type="date" id="travelDate" name="travelDate" required><br><br>
+
+            <label for="groupSize">Number of Travelers:</label><br>
+            <input type="number" id="groupSize" name="groupSize" min="1" required><br><br>
+            <label for="budget">Approximate Budget (USD):</label><br>
+            <input type="number" id="budget" name="budget" min="0"><br><br>
+            <label for="comments">Comments or Special Requests:</label><br>
+            <textarea id="comments" name="comments" rows="2" cols="50"></textarea><br><br>
+
+       
+        </fieldset>
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Inquiry">
+    </form>
+            
+            
+            
+            
+            </div>
+         
+        </section>
+
+   
+
+    </main>
+<br>
+
+<footer>
+    <div >
+       
+        <p><img src="logo.jpeg" alt="Company Logo"  width="20" height="30" >&copy; 2025  LIBERTY TOOURS | Address: 258 Conover St, Brooklyn, NY 11231, USA | Email: <a href="mailto:alimiabolaji@gmail.com" class="footer-email">info@libertytours.com</a></p>
+    </div>
+</footer>
+</body>
+</html>
