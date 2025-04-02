@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+<header>
+    <nav class = "nav">
+        <ul>
+            <a href="index.html">HOME</a>
+            <a href="todo.html">EXPERIENCE</a>
+            <a href="plantrip.html">PLAN TRIP</a>
+            <a href="contact.html">CONTACT</a>
+        </ul>
+    </nav>
+</header>
+    <main>
+      
+    <div class="inquiry-form">
+        <h2>Tourist Inquiry Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="category">Inquiry About:</label>
+            <select id="category" name="category" required>
+                <option value="restaurants">Restaurants</option>
+                <option value="tours">Tours</option>
+                <option value="flights">Flights</option>
+                <option value="hotels">Hotels</option>
+                <option value="experience">Experience</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </div>
+</main>
+<footer>
+    <div>
+      <a href="https://www.instagram.com/visitbarbados/?hl=en" target="_blank">
+        <img src="./image/logo/logo.png" alt="Instagram" width="30" height="30">
+      </a>
+    </div>
+   
+  </footer>
+
+</body>
+</html>
