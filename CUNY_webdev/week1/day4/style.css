@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: sans-serif;
+    background: linear-gradient(to bottom right, #87CEEB, #E0FFFF); /* sky blue gradient */
+  }
+
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    height: 80vh; /* or 100vh to fill screen height */
+  }
+
+  /* Column A: UL takes 25% */
+  .ul-1x4 {
+    width: 25%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height:100%;
+    height: 60%;
+    /* gap: 10px; */
+  }
+
+  .ul-1x4 li {
+    padding: 15px;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    /* border-radius: 8px; */
+  }
+
+  .ul-1x4 li {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    border: 1px solid #b8860b; /* Dark gold border */
+
+  }
+  
+  .ul-1x4 li:hover {
+    background-color: #f44336; /* Red on hover */
+  }
+
+  /* Column B: 2x2 Grid takes 75% */
+  .grid-2x2 {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+ 
+    gap: 10px;
+  }
+
+  .grid-2x2 div {
+    background: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 2px solid #b8860b; /* Dark gold border */
+    
+    text-align: center;
+    min-height: 200px;
+    position: relative;
+   
+  }
+
+  /* Box 2 & 3: Background images */
+  .grid-2x2 div:nth-child(2) {
+    background-image: url('./image/htx2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  .grid-2x2 div:nth-child(3) {
+    background-image: url('./image/htx1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+
+  /* Box 1 & 4: Paragraph + H1 */
+  .grid-2x2 div:nth-child(1) h1,
+  .grid-2x2 div:nth-child(4) h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .grid-2x2 div:nth-child(1) p,
+  .grid-2x2 div:nth-child(4) p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
