@@ -1,0 +1,454 @@
+
+body {
+  background: linear-gradient(to right, #fff8f3, #fbe7ff); /* soft pink/peach blend */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.header-frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+.logo {
+  flex: 0 0 80px;
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+}
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: textUpdown 2s ease-in-out infinite;
+    animation-delay: 1s; /* starts after 1 second */
+  }
+  .header-text h1 {
+    margin: 0;
+  
+    font-size: 2.2rem;
+    color: #2d2d2d;
+    font-family: 'Georgia', serif;
+    animation-delay: 0.5s;
+    
+  }
+  
+  .header-text h2 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 400;
+    animation-delay: 2s;
+  }
+
+  @keyframes textUpdown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes logoPulse {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .left-logo img,
+  .right-logo img {
+    animation: logoPulse 3s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  .left-logo img {
+    animation-delay: 0.3s;
+  }
+  
+  .right-logo img {
+    animation-delay: 0.9s;
+  }
+
+/* Information frame  */
+
+
+.frame{
+    border:1px solid red;
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    height:60px;
+    overflow:hidden;
+    text-align: center;
+     width: 100%;
+    margin:auto;
+}
+
+.slidewrapper{
+  display: flex;
+    width:400%;
+    height:100%;
+    animation: slideshow 8s infinite;
+}
+
+@keyframes slideshow {
+  0%   { margin-left: 0%; }
+  25%  { margin-left: -100%; }
+  50%  { margin-left: -200%; }
+  75%  { margin-left: -300%; }
+  100% { margin-left: 0%; }
+}
+
+.slidewrapper>div{
+    width:25%;
+    float:left;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 0 20px;
+    text-align: center;
+}
+/* Gradient backgrounds for smoother feel */
+.s1 {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+.s2 {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.s3 {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.s4 {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+}
+
+.flex1, .gridbox > div {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  position: relative;
+}
+
+.flex1 {
+  flex: 1;  /* Flex grow to take up available space */
+  background: url('./image/photo/asian_hair2.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  padding: 30px;
+  color: white;
+  text-align: center;
+}
+
+.flex1 h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.flexbox{
+  background-color: bisque;
+  display:flex;
+  height:600px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.flexbox>div{
+  border: 2px solid salmon;
+  width:100%; 
+
+  text-align: center;
+  position: relative; }
+  
+
+.bordered-text2 {
+  width: 30%;
+  margin: 10px 0;
+  position: relative;
+  z-index: 2;
+  font-weight: lighter;
+}
+/* Optional: Target individually if needed */
+.bordered-text {
+  width: 30%;
+  margin: 10px 0;
+  padding: 12px;
+
+
+  /* background-color: #f9f9f9; */
+  font-weight: lighter;
+  text-align: left;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Target individually if needed */
+.p1 {
+  color: black; 
+  border: 3px solid #f9fffa;
+}
+
+.p2 {
+    color: rgb(248, 3, 162);
+  border: 1px solid #FF9800;
+
+}
+.img-in-box {
+  width: 80%;
+  height: auto;
+  margin-top: 10px;
+  z-index: 1;
+  position: relative;
+  border-radius: 8px;
+}
+
+/* Grid container for Box4 */
+
+
+/* Box 4 (grid1) styling */
+.grid1 {
+  background: url('./image/photo/hair_care.jpg') no-repeat center center;
+  z-index: 1;
+  background-size: cover;
+  padding: 30px;
+  text-align: center;
+}
+.grid1 a {color:white;}
+
+.gridbox{
+  text-align: center;
+  display:grid ;
+  grid-template-columns:repeat(2,1fr);
+  gap:2px;
+}
+
+
+.gridbox div{
+  border:2px solid rgb(56,87,9);
+}
+
+/* product and modal logic  */
+/* Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-items: center;
+}
+
+
+
+.product {
+  text-align: center;
+  margin: 20px;
+}
+
+.product img {
+  max-width: 100%;
+  height: 60%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Flexbox container for alignment */
+
+
+
+/* Product Display Section */
+
+
+.modal-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h5 {
+  margin: 0;
+}
+
+.btn-close {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-body img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.price {
+  color: green;
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+
+.booksy-promo {
+  background-color: #fff7f3;
+  border: 1px solid #ffc1c1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto;
+  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.booksy-promo h3 {
+  color: #d81b60;
+  margin-bottom: 1rem;
+}
+
+.booksy-promo ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.booksy-promo ul li::before {
+  content: "✔️ ";
+  margin-right: 6px;
+}
+
+.booksy-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff4081;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+.site-footer {
+  background-color: #111;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brand-info, .contact-info, .social-links {
+  flex: 1 1 250px;
+}
+
+.site-footer h4, .site-footer h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
