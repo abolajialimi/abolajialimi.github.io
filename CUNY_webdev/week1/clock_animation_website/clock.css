@@ -1,0 +1,119 @@
+
+
+.herobox {
+position: relative;
+background: #ffe066; /* Bright background */
+background-image: url('./photo/houston.jpg'); /* Replace with your image URL */
+background-size: cover;
+background-position: center;
+height: 100vh;
+width: 100%;
+}
+
+
+.clock {
+position: absolute;
+top: 20px;
+left: 20px;
+width: 200px; /* or match your actual image size */
+height: 200px;
+}
+
+.clock-face {
+width: 100%;
+height: 100%;
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+/* Assume the PNG is already transparent */
+filter: drop-shadow(0 0 5px #fff700); /* bright yellow glow */
+}
+
+/* Wrap each hand so we can rotate it around a custom point */
+.hand-wrapper {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+transform-origin: center;
+}
+
+/* Shared clock-hand styles */
+.clock-hand {
+position: absolute;
+top: -20px; /* move upward — adjust based on your image */
+left: -2px; /* tweak based on hand image width */
+width: 65px; /* adjust to your image width */
+height: 40px; /* or let it scale naturally */
+z-index: 2;
+filter: drop-shadow(0 0 5px #00e1ff); /* cyan glow for contrast */
+
+
+}
+/* Animating the wrappers instead of the hand image itself */
+.hour-wrapper {
+animation: rotate-hour 10s linear forwards;
+transform: rotate(90deg); /* starting at 3:00 */
+}
+
+.minute-wrapper {
+animation: rotate-minute 10s linear forwards;
+transform: rotate(0deg);
+}
+
+
+@keyframes rotate-hour {
+from { transform: rotate(0deg); }
+to   { transform: rotate(30deg); }
+}
+@keyframes rotate-minute {
+from { transform: rotate(-90deg); }
+to   { transform: rotate(270deg); }
+}
+
+.info-box {
+position: absolute;
+bottom: 20px;
+right: 20px;
+background-color: rgba(200, 200, 200, 0.3); /* gray with slight transparency */
+width:30%;
+padding: 16px;
+border-radius: 12px;
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+text-align: center;
+z-index: 10;
+}
+
+
+.click-button {
+display: inline-block;
+margin-top: 10px;
+padding: 10px 16px;
+background-color: #ff5e00;
+color: white;
+text-decoration: none;
+font-weight: bold;
+border-radius: 8px;
+transition: background-color 0.3s ease;
+}
+
+.click-button:hover {
+background-color: #ff3300;
+}  
+
+
+.clock-center {
+position: absolute;
+top: 50%;
+left: 50%;
+width: 10px;
+height: 10px;
+background-color: #222; /* or any bright color */
+border: 1px solid #fff700; /* optional for contrast */
+border-radius: 50%;
+transform: translate(-50%, -50%);
+z-index: 5;
+box-shadow: 0 0 5px #ff0; /* optional glow */
+}
