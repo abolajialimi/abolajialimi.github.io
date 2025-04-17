@@ -1,0 +1,164 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Game container */
+  .container {
+    background: #2a2a40;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    min-height: 800px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  
+  /* Heading */
+  h1 {
+    font-size: 2.5rem;
+    color: #00f7ff;
+    margin-bottom: 20px;
+  }
+  
+  /* Message */
+  .msg {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ffdb70;
+    min-height: 50px;
+  }
+  
+  /* Inputs and buttons */
+  .input {
+    padding: 12px;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    outline: none;
+    text-align: center;
+  }
+  
+  .check,
+  .resetBtn {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .check:hover,
+  .resetBtn:hover {
+    background-color: #0097a7;
+  }
+  
+  /* Scoreboard styling */
+  .scoreboard {
+    background-color: #383855;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .scoreboard span {
+    font-weight: bold;
+    color: #00ff9c;
+  }
+  
+  /* Secret number display */
+  .secretNumberBox {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 200px;
+  }
+  .reactionImg {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+  }
+  
+  .secretNumber {
+    background-color: #12121a;
+    color: #00f7ff;
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 3px solid #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
+  }
+  
+  /* Guess history section */
+  .guessHistoryContainer {
+    margin-top: 20px;
+    background-color: #383855;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .guessHistoryContainer h3 {
+    margin-bottom: 10px;
+    color: #ffb347;
+  }
+  
+  .guessHistoryList {
+    list-style: none;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .guessHistoryList li {
+    padding: 5px;
+    border-bottom: 1px solid #555;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .input {
+      width: 100%;
+    }
+  
+    .check,
+    .resetBtn {
+      width: 100%;
+    }
+  
+    .scoreboard {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+  
