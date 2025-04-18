@@ -47,12 +47,14 @@ btn.addEventListener('click', function(){
 
 if (guessHistory.includes(value)) {
         msg.textContent = `⛔ You've already guessed ${value}. Try something new.`;
+        input.value = ''; // clear input field
         return;
       }
 
 
 if (!userInput || isNaN(value) || value < 1 || value > 100) {
     msg.textContent = '⚠️ Enter a number between 1 and 100 ONLY';
+    input.value = ''; // clear input field
     return;
 }
 if (score <= 0) {
@@ -62,13 +64,14 @@ if (score <= 0) {
 
 
 if (value === randomValue) {
-    msg.textContent = `🎉 Success! You guessed the number: ${randomValue} with score: ${score}`;
+    msg.textContent = `🎉 Success! You guessed the secret number: ${randomValue} with score: ${score}`;
     input.disabled = true;
     btn.disabled = true;
     reactionImg.src = 'Images/win.png';  // Show win picture
     showHistoryHighscore(score)
     container.classList.add('success');
     container.classList.remove('failed', 'guessing');
+    secretNumberBox.textContent = randomValue;
 
     return;
 }
