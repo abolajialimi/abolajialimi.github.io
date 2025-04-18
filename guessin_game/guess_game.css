@@ -140,6 +140,27 @@
     border-bottom: 1px solid #555;
   }
   
+/* Success State */
+.success {
+  background-color: #2a4032 !important;
+  border: 3px solid #00ff7f;
+  box-shadow: 0 0 15px #00ff7f;
+}
+
+/* Failure/Game Over State */
+.failed {
+  background-color: #402a2a !important;
+  border: 3px solid #ff4c4c;
+  box-shadow: 0 0 15px #ff4c4c;
+}
+
+/* Ongoing guess feedback */
+.guessing {
+  border: 2px dashed #ffc107;
+}
+
+
+
   /* Responsive */
   @media screen and (max-width: 600px) {
     h1 {

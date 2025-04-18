@@ -9,6 +9,10 @@ const msg  = document.querySelector('.msg')
 const resetBtn = document.querySelector('.resetBtn');
 const reactionImg = document.querySelector('.reactionImg');
 const historyList = document.querySelector('.guessHistoryList');
+const container = document.querySelector('.container');
+const secretNumberBox = document.querySelector('.secretNumber');
+
+
 const imageOptions = [
 'Images/pic1.png',
 'Images/pic2.png',
@@ -41,6 +45,12 @@ btn.addEventListener('click', function(){
     const randomImage = imageOptions[Math.floor(Math.random() * imageOptions.length)];
     reactionImg.src = randomImage;
 
+if (guessHistory.includes(value)) {
+        msg.textContent = `⛔ You've already guessed ${value}. Try something new.`;
+        return;
+      }
+
+
 if (!userInput || isNaN(value) || value < 1 || value > 100) {
     msg.textContent = '⚠️ Enter a number between 1 and 100 ONLY';
     return;
@@ -57,6 +67,9 @@ if (value === randomValue) {
     btn.disabled = true;
     reactionImg.src = 'Images/win.png';  // Show win picture
     showHistoryHighscore(score)
+    container.classList.add('success');
+    container.classList.remove('failed', 'guessing');
+
     return;
 }
 
@@ -70,15 +83,25 @@ if (score === 0) {
     input.disabled = true;
     btn.disabled = true;
     reactionImg.src = 'Images/lose.png';  // Show lose picture
+    container.classList.add('failed');
+    container.classList.remove('success', 'guessing');
+    secretNumberBox.textContent = randomValue;
+
 
 } else if (value < randomValue) {
     msg.textContent = `⬆️ Too low! Try a higher number. Score: ${score}`;
+    container.classList.add('guessing');
+    container.classList.remove('success', 'failed');
+
     // guessHistory.push(value);
     console.log('Guess History:', guessHistory);
     input.value = ''; // clear input field
 
 } else {
     msg.textContent = `⬇️ Too high! Try a lower number. Score: ${score}`;
+    container.classList.add('guessing');
+    container.classList.remove('success', 'failed');
+
     // guessHistory.push(value);
     console.log('Guess History:', guessHistory);
     input.value = ''; // clear input field
@@ -105,9 +128,12 @@ historyList.innerHTML = ''; // Clear list on page
 input.value = '';
 input.disabled = false;
 btn.disabled = false;
+container.classList.remove('success', 'failed', 'guessing');
 
 
 reactionImg.src = imageOptions[Math.floor(Math.random() * imageOptions.length)];
+secretNumberBox.textContent = '?';
+
 });
 // Function to update the history list in HTML
 function updateHistory(guess) {
