@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI for Two People</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+        <h2>BMI Entry</h2>
+
+    <label for="personSelect">Select Person:</label>
+    <select id="personSelect">
+        <option value="1">Peter</option>
+        <option value="2">Lucas</option>
+    </select>
+
+    <label for="mass">Mass (kg):</label>
+    <input type="number" id="mass" placeholder="Enter mass">
+
+    <label for="height">Height (m):</label>
+    <input type="number" id="height" placeholder="Enter height">
+
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="showData()">Show All Data</button>
+    <button onclick="calculateBMI()">Calculate BMI : A </button>
+    <button onclick="calculateBMI2()">Calculate BMI : C</button>
+
+    <div id="result"></div>
+
+
+    <h2>Temperature Converter</h2>
+    <label for="conversionType">Select Person:</label>
+    <select id="conversionType">
+        <option value="cToF">Celsius to Fahrenheit</option>
+        <option value="fToC">Fahrenheit to Celsius</option>
+    </select>
+    <label for="tempvalue">Temperatuure:</label>
+    <input type="number" id="temperature" placeholder="Enter temperature">
+
+    <button onclick="convertTemp()">Convert Temp : B</button>
+    <button id="convertBtnArrow">Convert Temp : D</button>
+    <div id="tempresult"></div>
+
+
+    
+  
+        <!-- Link to external JavaScript -->
+        <script src="function1.js"></script>
+      
+ 
+</body>
+</html>
+
+
+
+
+
+
